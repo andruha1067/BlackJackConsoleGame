@@ -5,15 +5,15 @@
 ## Debug
 ProjectName            :=BlackJack
 ConfigurationName      :=Debug
-WorkspacePath          :=C:/Users/Owner/Desktop/CPP_BASICS_CLASS/BlackJack
-ProjectPath            :=C:/Users/Owner/Desktop/CPP_BASICS_CLASS/BlackJack/BlackJack
+WorkspacePath          :=C:/Users/Owner/Desktop/My_Branch/BlackJack
+ProjectPath            :=C:/Users/Owner/Desktop/My_Branch/BlackJack/BlackJack
 IntermediateDirectory  :=$(ConfigurationName)
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Owner
-Date                   :=14/02/2020
+Date                   :=19/03/2020
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/MinGW/bin/g++.exe
 SharedObjectLinkerName :=C:/MinGW/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/MinGW/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/BlackJackFuncs.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/BlackJackFuncs.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
 
 
 
@@ -93,17 +93,17 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Owner/Desktop/CPP_BASICS_CLASS/BlackJack/BlackJack/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
-
 $(IntermediateDirectory)/BlackJackFuncs.cpp$(ObjectSuffix): BlackJackFuncs.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/BlackJackFuncs.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/BlackJackFuncs.cpp$(DependSuffix) -MM BlackJackFuncs.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Owner/Desktop/CPP_BASICS_CLASS/BlackJack/BlackJack/BlackJackFuncs.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/BlackJackFuncs.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Owner/Desktop/My_Branch/BlackJack/BlackJack/BlackJackFuncs.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/BlackJackFuncs.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/BlackJackFuncs.cpp$(PreprocessSuffix): BlackJackFuncs.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/BlackJackFuncs.cpp$(PreprocessSuffix) BlackJackFuncs.cpp
+
+$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Owner/Desktop/My_Branch/BlackJack/BlackJack/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
