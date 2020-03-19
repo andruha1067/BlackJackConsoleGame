@@ -9,12 +9,12 @@
 
 using namespace std;
 
-const int RESHUFFLE_AMNT {10};
-const int MIN_BUY_IN {50};
+const int RESHUFFLE_AMNT {15};
+const int MIN_BUY_IN {20};
 const int MIN_BET_DOLLARS {10};
 const int DEALER_HIT_SCORE_LIMIT {17};
 const int MAX_GAME_SCORE {21};
-const double BLACK_JACK_SCORE_FACTOR {1.5};
+const double BLACK_JACK_SCORE_FACTOR {1.25};
 const vector<int> CARD_TO_SCORE {11, 10, 10, 10, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
 enum GAME_RESULTS
