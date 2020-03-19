@@ -9,8 +9,8 @@
 
 using namespace std;
 
-const int RESHUFFLE_AMNT {15};
-const int MIN_BUY_IN {20};
+const int RESHUFFLE_AMNT {12};
+const int MIN_BUY_IN {40};
 const int MIN_BET_DOLLARS {10};
 const int DEALER_HIT_SCORE_LIMIT {17};
 const int MAX_GAME_SCORE {21};
