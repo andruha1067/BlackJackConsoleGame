@@ -1,20 +1,26 @@
 // Black Jack Game Function Declarations
 #include <iostream>
 #include <cctype>
-#include <vector>
-#include <string>
 #include <cstdlib>
 #include <ctime>
 #include <cmath>
+#include "BlackJackFuncs.h"
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+using std::vector;
+using std:: string;
 
-const int RESHUFFLE_AMNT {12};
-const int MIN_BUY_IN {40};
-const int MIN_BET_DOLLARS {10};
+// Globals that CAN be adjusted (exercise caution)
+const int RESHUFFLE_AMNT {12};  // reshuffle amount should be around 10 cards, otherwise cards vector could be empty and game will crash
+const int MIN_BUY_IN {40}; // should be greater than or equal to MIN_BET_DOLLARS
+const int MIN_BET_DOLLARS {10}; // can be any positive integer
+const double BLACK_JACK_SCORE_FACTOR {1.25}; // player winnings are multiplied by this factor if player gets 21 (not specifically Ace + 10)
+
+// Globals that CANNOT be adjusted
 const int DEALER_HIT_SCORE_LIMIT {17};
 const int MAX_GAME_SCORE {21};
-const double BLACK_JACK_SCORE_FACTOR {1.25};
 const vector<int> CARD_TO_SCORE {11, 10, 10, 10, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
 enum GAME_RESULTS

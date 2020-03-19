@@ -4,6 +4,6 @@
 -Ic:\MinGW\lib\gcc\mingw32\8.2.0\include
 -Ic:\MinGW\include
 -Ic:\MinGW\lib\gcc\mingw32\8.2.0\include-fixed
--IC:\Users\Owner\Desktop\My_Branch\BlackJack\BlackJack
+-IC:\Users\Owner\Desktop\Clone_BJ_Project\BlackJackConsoleGame\BlackJack
 -target
 x86_64-pc-windows-gnu

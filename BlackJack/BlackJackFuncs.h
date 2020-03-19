@@ -2,11 +2,8 @@
 #include <vector>
 #include <string>
 
-using std::vector;
-using std::string;
-
 // Check if string entered into menu is a number
-bool IsNumeric(const string aPlayerInput);
+bool IsNumeric(const std::string aPlayerInput);
 
 // Displays main menu
 void PrintMainMenu();
@@ -18,7 +15,7 @@ bool HandleMainMenu(char aPlayerInput);
 void PrintMenu();
 
 // Handle 2nd level menu input
-bool HandleMenu(string aPlayerInput, double &aPlayerTot);
+bool HandleMenu(std::string aPlayerInput, double &aPlayerTot);
 
 // Displays game menu
 void PrintGameMenu();
@@ -37,16 +34,16 @@ void PrintBetMenu();
 double HandleGameBet(const double &aPlayerTot);
 
 // Determine score from drawn card
-const int MapCardToScore(const string & aCard);
+const int MapCardToScore(const std::string & aCard);
 
 // Display dealt cards
-void DisplayCards(const vector<string> &aPlayerCards, const vector<string> &aDealerCards, const char &aPlayerAction);
+void DisplayCards(const std::vector<std::string> &aPlayerCards, const std::vector<std::string> &aDealerCards, const char &aPlayerAction);
 
 // Printing updated game screen with scores
 void PrintScore(const int &aPlayerScore, const int &aDealerScore, const char &aPlayerAction);
 
 // Computes scores of both user and dealer based on current hand, and calls PrintScore
-const vector<int> GetScore(const vector<string> &aPlayerCards, const vector<string> &aDealerCards, const char &aPlayerAction);
+const std::vector<int> GetScore(const std::vector<std::string> &aPlayerCards, const std::vector<std::string> &aDealerCards, const char &aPlayerAction);
 
 // Determine is player has black jack
 bool IsBlackJack(const int &aPlayerScore);
@@ -63,24 +60,21 @@ void PrintGameReturns(const double &aWinAmount, const int &aPlayerWinLoseDraw);
 const double CalcBetReturns(const double &aPlayerBetAmount, const int &aPlayerScore, const int &aPlayerWinLoseDraw, const bool &aBlackJack);
 
 // Determine game result (win, lose, draw)
-bool GameOver(const vector<int> &aScores, const char &aPlayerHitOrStayAction, int &aPlayerWinLoseDraw, const bool aBlackJack);
+bool GameOver(const std::vector<int> &aScores, const char &aPlayerHitOrStayAction, int &aPlayerWinLoseDraw, const bool aBlackJack);
 
 // reshuffles card deck after amount of cards left in deck has fallen below a threshold value
-void ReshuffleDeck(vector<string> &aCardDeck, const vector<string> &aFullDeck);
+void ReshuffleDeck(std::vector<std::string> &aCardDeck, const std::vector<std::string> &aFullDeck);
 
 // Update card deck
-void UpdateCardDeck(vector<string> &aCardDeck, const size_t &aCardIdx);
+void UpdateCardDeck(std::vector<std::string> &aCardDeck, const size_t &aCardIdx);
 
 // Deal cards - Dispenses cards for first deal and every draw after that
-void Deal(vector<string> &aCardDeck, vector<string> &aPlayerCards);
-
-// First deal which dispenses 2 cards each
-//void FirstDeal(vector<string> &aCardDeck, vector<string> &aPlayerCards, vector<string> &aDealerCards, const int aNumCardsEach);
+void Deal(std::vector<std::string> &aCardDeck, std::vector<std::string> &aPlayerCards);
 
 // Clear player hand vector when new game is begun
-void ClearPlayerHand(vector<string> &aPlayerHand);
+void ClearPlayerHand(std::vector<std::string> &aPlayerHand);
 
-void ResetFlagsToNewGame(bool &aFirstDeal, bool &aGameOver, char &aPlayerAction, vector<string> &aPlayerCards, vector<string> &aDealerCards);
+void ResetFlagsToNewGame(bool &aFirstDeal, bool &aGameOver, char &aPlayerAction, std::vector<std::string> &aPlayerCards, std::vector<std::string> &aDealerCards);
 
 // Quit function
 void PrintQuitMessage(const double &aPlayerTot);
